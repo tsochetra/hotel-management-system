@@ -1,9 +1,6 @@
 
 room_id			room_type		room_price		room_max		room_status
 R104			1				4				8				deleted
-R105			2				4				8				active
-R108			1				4				8				deleted
-R204			2				10				5				active
-R505			4				40				8				deleted
-R606			3				35				7				deleted
-R507			4				5				4				active
+R105			4				10				2				deleted
+R202			2				4				4				active
+R204			4				40				8				active
