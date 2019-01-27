@@ -97,7 +97,8 @@ void displayAddRoom() {
 }
 
 void displayDeleteRoom() {
-    
+
+    //get all rows from text data
     struct getRoom get = getRoomData();
 
 

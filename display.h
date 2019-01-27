@@ -5,6 +5,7 @@
 
 void displayHeader() {
     printf("%s\n", PINK);
+    printf("clear");
     printf(
     " _   _       _       _    ___  ___                                                  _       _____           _                 \n"
     "| | | |     | |     | |   |  \\/  |                                                 | |     /  ___|         | |                \n"
@@ -21,4 +22,43 @@ void displayHeader() {
     "                                   \\  /\\  /  __/ | (_| (_) | | | | | |  __/ |_|                                               \n"
     "                                    \\/  \\/ \\___|_|\\___\\___/|_| |_| |_|\\___| (_)                                               \n"
     "____________________________________________________________________________________________________________________________________\n");
+}
+
+void displayMainMenu() {
+    printf("Please choose an operation: \n\n");
+    printf("1. Room Operation\n");
+    printf("2. Customer Operation\n");
+    printf("3. Booking Operation\n");
+    printf("4. Exit Application\n\n");
+    printf("Enter a number: \n");
+}
+void displayRoomOperation() {
+    printf("Please choose an operation: \n\n");
+    printf("1. View all rooms\n");
+    printf("2. Add more room\n");
+    printf("3. Update room information\n");
+    printf("4. Delete room\n");
+    printf("5. Back to main menu\n\n");
+    printf("Enter a number: \n");
+}
+
+void displayCustomerOperation() {
+    printf("Please choose an operation: \n\n");
+    printf("1. View all customers\n");
+    printf("2. Add more customer\n");
+    printf("3. Update customer information\n");
+    printf("4. Delete customer\n");
+    printf("5. Back to main menu\n\n");
+    printf("Enter a number: \n");
+}
+
+void displayBookingOperation() {
+    printf("Please choose an operation: \n\n");
+    printf("1. Check room availability\n");
+    printf("2. Make a booking\n");
+    printf("3. Check-in\n");
+    printf("4. Check-out\n");
+    printf("5. Cancel a booking\n");
+    printf("6. Back to main menu\n");
+    printf("Enter a number: \n");
 }

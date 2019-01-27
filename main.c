@@ -4,7 +4,7 @@
 #include "booking.h"
 #include "room.h"
 #include "display.h"
-
+#include "customer.h"
 int main(void) {
 
     // printf("1. Check room availability\n");
@@ -14,5 +14,10 @@ int main(void) {
     // printf("5. Cancel a booking\n");
     // printf("6. Back to main menu\n");
     // printf("Enter a number: \n");
+    // displayBooking();
+    // displayCustomer();
+    // displayAddCustomer();
+    // displayDeleteCustomer();
+    // displayUpdateCustomer();
     displayBooking();
 }

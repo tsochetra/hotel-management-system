@@ -1,0 +1,5 @@
+customer_id		customer_name			customer_nationality		customer_phone	customer_sex		customer_status
+1				Sochetra				KH							092988858		M					active
+2				Testinga				KM							012324512		F					active
+3				aadffaffa				US							092988858		F					active
+4				Testings				KH							092988858		M					active

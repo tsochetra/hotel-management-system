@@ -2,21 +2,9 @@
 #include <stdlib.h>
 #include <string.h>
 
+#include "room.h"
+
 struct Booking {
-    int book_id;
-    int stay_days;
-    int total_people;
-    int customer_id;
-    char room_id[12];
-    int check_in;
-    int check_out;
-};
-
-void displayBooking() {
-
-    struct Booking booking[100];
-    FILE *file = fopen("./data/booking.txt", "r");
-    char temp[100];
     char book_id[12];
     char stay_days[12];
     char total_people[12];
@@ -24,36 +12,46 @@ void displayBooking() {
     char room_id[12];
     char check_in[12];
     char check_out[12];
+};
+struct getBooking {
+    struct Booking booking[999];
+};
 
-    int i = 0;
+int b = 0;
 
-    fscanf(file, "%s\t\t\t\t%s\t\t\t\t%s\t\t\t\t%s\t\t\t\t%s\t\t\t\t%s\t\t\t\t%s", book_id, stay_days, total_people, customer_id, room_id, check_in, check_out);
+struct getBooking getBookingData() {
 
-    while(fscanf(file, "%s\t\t\t\t%s\t\t\t\t%s\t\t\t\t%s\t\t\t\t%s\t\t\t\t%s\t\t\t\t%s", book_id, stay_days, total_people, customer_id, booking[i].room_id, check_in, check_out) != EOF) {
-        booking[i].book_id = atoi(book_id);
-        booking[i].stay_days = atoi(stay_days);
-        booking[i].total_people = atoi(total_people);
-        booking[i].customer_id = atoi(customer_id);
-        booking[i].check_in = atoi(check_in);
-        booking[i].check_out = atoi(check_out);
-        i++;
+    struct getBooking get;
+    FILE *file = fopen("./data/booking.txt", "r");
+
+    char temp[50];
+    b = 0;
+
+    fscanf(file, "%s\t\t\t\t%s\t\t\t\t%s\t\t\t\t%s\t\t\t\t%s\t\t\t\t%s\t\t\t\t%s", temp, temp, temp, temp, temp, temp, temp);
+
+    while(fscanf(file, "%s\t\t\t\t%s\t\t\t\t%s\t\t\t\t%s\t\t\t\t%s\t\t\t\t%s\t\t\t\t%s", get.booking[b].book_id, get.booking[b].stay_days, get.booking[b].total_people, get.booking[b].customer_id, get.booking[b].room_id, get.booking[b].check_in, get.booking[b].check_out) != EOF) {
+        b++;
     }
+    fclose(file);
+    return get;
+}
+void displayBooking() {
+
+    struct getBooking displayBooking = getBookingData();
 
     printf("Book ID\t\tStay\t\tTotal People\t\tCustomer ID\t\tRoom ID\t\tCheck-In\t\tCheck-Out\n");
     
-    for(int j = 0; j< i; j++) {
-        printf("%d\t\t%d\t\t%d\t\t\t%d\t\t\t%s\t\t%d\t\t%d\n", 
-        booking[j].book_id, 
-        booking[j].stay_days,
-        booking[j].total_people,
-        booking[j].customer_id,
-        booking[j].room_id,
-        booking[j].check_in,
-        booking[j].check_out
+    for(int j = 0; j< b; j++) {
+        printf("%s\t\t%s\t\t%s\t\t\t%s\t\t\t%s\t\t%s\t\t%s\n", 
+        displayBooking.booking[j].book_id, 
+        displayBooking.booking[j].stay_days,
+        displayBooking.booking[j].total_people,
+        displayBooking.booking[j].customer_id,
+        displayBooking.booking[j].room_id,
+        displayBooking.booking[j].check_in,
+        displayBooking.booking[j].check_out
         );
     }
-
-    fclose(file);
 
 }
 
