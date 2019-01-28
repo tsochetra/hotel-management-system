@@ -42,7 +42,7 @@ void displayRoom() {
     struct getRoom displayRoom = getRoomData();
 
     printf("Room ID\t\tType\t\t\tRoom Price\t\tRoom Max People\t\tRoom Status\n");
-    
+    displayLine();
     for(int j = 0; j< i; j++) {
         if(strcmp(displayRoom.room[j].room_status, "deleted") == 0) {
             continue;
@@ -54,6 +54,20 @@ void displayRoom() {
         displayRoom.room[j].room_max_people,
         displayRoom.room[j].room_status
         );
+    }
+    displayLine();
+    printf("1. Exit\n");
+    displayLine();
+    printf("Enter a number: ");
+    int loop = 1;
+    while(loop) {
+        int option;
+        scanf("%d", &option);
+        if(option == 1) {
+            loop = 0;
+        } else {
+            printf("Invalid choice.: ");
+        }
     }
 
 }

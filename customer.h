@@ -37,8 +37,8 @@ struct getCustomer getCustomerData() {
 void displayCustomer() {
     struct getCustomer displayCustomer = getCustomerData();
 
-    printf("ID\tName\t\t\tNationality\tPhone\t\tSex\tRoom Status\n");
-    
+    printf("ID\tName\t\t\tNationality\tPhone\t\tSex\tStatus\n");
+    displayLine();
     for(int j = 0; j< a; j++) {
         if(strcmp(displayCustomer.customer[j].c_status, "deleted") == 0) {
             continue;
@@ -51,6 +51,21 @@ void displayCustomer() {
         displayCustomer.customer[j].c_sex,
         displayCustomer.customer[j].c_status
         );
+    }
+
+    displayLine();
+    printf("1. Exit\n");
+    displayLine();
+    printf("Enter a number: ");
+    int loop = 1;
+    while(loop) {
+        int option;
+        scanf("%d", &option);
+        if(option == 1) {
+            loop = 0;
+        } else {
+            printf("Invalid choice.: ");
+        }
     }
 
 }

@@ -4,8 +4,7 @@
 #define PINK  "\x1B[35m"
 
 void displayHeader() {
-    printf("%s\n", PINK);
-    printf("clear");
+    system("clear");
     printf(
     " _   _       _       _    ___  ___                                                  _       _____           _                 \n"
     "| | | |     | |     | |   |  \\/  |                                                 | |     /  ___|         | |                \n"
@@ -24,13 +23,17 @@ void displayHeader() {
     "____________________________________________________________________________________________________________________________________\n");
 }
 
+void displayLine() {
+    printf("____________________________________________________________________________________________________________________________________\n");
+}
+
 void displayMainMenu() {
     printf("Please choose an operation: \n\n");
     printf("1. Room Operation\n");
     printf("2. Customer Operation\n");
     printf("3. Booking Operation\n");
     printf("4. Exit Application\n\n");
-    printf("Enter a number: \n");
+    printf("Enter a number: ");
 }
 void displayRoomOperation() {
     printf("Please choose an operation: \n\n");
@@ -39,7 +42,7 @@ void displayRoomOperation() {
     printf("3. Update room information\n");
     printf("4. Delete room\n");
     printf("5. Back to main menu\n\n");
-    printf("Enter a number: \n");
+    printf("Enter a number: ");
 }
 
 void displayCustomerOperation() {
@@ -49,7 +52,7 @@ void displayCustomerOperation() {
     printf("3. Update customer information\n");
     printf("4. Delete customer\n");
     printf("5. Back to main menu\n\n");
-    printf("Enter a number: \n");
+    printf("Enter a number: ");
 }
 
 void displayBookingOperation() {
@@ -60,5 +63,5 @@ void displayBookingOperation() {
     printf("4. Check-out\n");
     printf("5. Cancel a booking\n");
     printf("6. Back to main menu\n");
-    printf("Enter a number: \n");
+    printf("Enter a number: ");
 }

@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "room.h"
+// #include "room.h"
 
 struct Booking {
     char book_id[12];
@@ -53,5 +53,23 @@ void displayBooking() {
         );
     }
 
+    displayLine();
+    printf("1. Exit\n");
+    displayLine();
+    printf("Enter a number: ");
+    int loop = 1;
+    while(loop) {
+        int option;
+        scanf("%d", &option);
+        if(option == 1) {
+            loop = 0;
+        } else {
+            printf("Invalid choice.: ");
+        }
+    }
+    
+}
+
+void displayRoomAvailability() {
 }
 
